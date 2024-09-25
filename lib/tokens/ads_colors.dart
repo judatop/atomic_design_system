@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class ADSColors {
   ADSColors._();
 
-  // static const color = Color(0xFF18181A);
-  static const color = Color(0xFF2563EB);
+  static const color = Color(0xFF18181A);
 
   static const Color bgLight = Color(0XFFFFFFFF);
   static const Color textLight = Color(0XFF09090B);
