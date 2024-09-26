@@ -1,6 +1,7 @@
 class ADSSizes {
   ADSSizes._();
 
+  static const double sizeXXXS = 8;
   static const double sizeXXS = 13;
   static const double sizeXS = 15;
   static const double sizeSM = 18;

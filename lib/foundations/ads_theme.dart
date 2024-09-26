@@ -25,6 +25,18 @@ class ADSTheme {
     color: ADSFoundationsColors.titleTextLight,
   );
 
+  static final darkBodyMedium = lightBodyMedium.copyWith(
+    color: ADSFoundationsColors.bodyTextDark,
+  );
+
+  static final darkTitleMedium = lightTitleMedium.copyWith(
+    color: ADSFoundationsColors.subtitleTextDark,
+  );
+
+  static final darkHeadlineMedium = lightHeadlineMedium.copyWith(
+    color: ADSFoundationsColors.titleTextDark,
+  );
+
   static const double borderWidth = 1;
 
   static final inputDecoration = InputDecorationTheme(
@@ -101,7 +113,7 @@ class ADSTheme {
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(
         padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
-          const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+          const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
@@ -113,21 +125,21 @@ class ADSTheme {
           ADSFoundationsColors.primaryColor,
         ),
         textStyle: MaterialStateProperty.all<TextStyle?>(
-          lightBodyMedium,
+          darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
     ),
     iconButtonTheme: IconButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color?>(
-          ADSFoundationsColors.whiteColor,
+          ADSFoundationsColors.backgroundLight,
         ),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
         padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
-          const EdgeInsets.only(top: 10, bottom: 10, left: 30, right: 30),
+          const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
         side: MaterialStateProperty.resolveWith<BorderSide>(
           (Set<MaterialState> states) {
@@ -137,9 +149,9 @@ class ADSTheme {
                 width: 2.0,
               );
             }
-            return const BorderSide(
-              color: ADSFoundationsColors.primaryColor,
-              width: 1.0,
+            return BorderSide(
+              color: Colors.grey.withOpacity(.2),
+              width: 1.5,
             );
           },
         ),
@@ -150,10 +162,10 @@ class ADSTheme {
           ),
         ),
         foregroundColor: MaterialStateProperty.all<Color?>(
-          ADSFoundationsColors.primaryColor,
+          ADSFoundationsColors.bodyTextLight,
         ),
         textStyle: MaterialStateProperty.all<TextStyle?>(
-          lightBodyMedium,
+          darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
     ),
@@ -271,6 +283,211 @@ class ADSTheme {
           return ADSFoundationsColors.bodyTextLight;
         },
       ),
+    ),
+    dividerTheme: DividerThemeData(
+      color: Colors.grey.withOpacity(.25),
+      thickness: 1,
+    ),
+  );
+
+  static final darkTheme = ThemeData(
+    useMaterial3: true,
+    colorScheme: const ColorScheme(
+      brightness: Brightness.dark,
+      primary: ADSFoundationsColors.primaryColor,
+      onPrimary: ADSFoundationsColors.bodyTextDark,
+      secondary: ADSFoundationsColors.primaryColor,
+      onSecondary: ADSFoundationsColors.bodyTextDark,
+      error: ADSFoundationsColors.errorBackground,
+      onError: ADSFoundationsColors.whiteColor,
+      background: ADSFoundationsColors.backgroundDark,
+      onBackground: ADSFoundationsColors.bodyTextDark,
+      surface: ADSFoundationsColors.backgroundDark,
+      surfaceTint: ADSFoundationsColors.bodyTextDark,
+      onSurface: ADSFoundationsColors.whiteColor,
+    ),
+    textTheme: TextTheme(
+      headlineMedium: darkHeadlineMedium,
+      titleMedium: darkTitleMedium,
+      bodyMedium: darkBodyMedium,
+    ),
+    filledButtonTheme: FilledButtonThemeData(
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+          const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+          ),
+        ),
+        backgroundColor: MaterialStateProperty.all<Color?>(
+          ADSFoundationsColors.primaryColor,
+        ),
+        textStyle: MaterialStateProperty.all<TextStyle?>(
+          darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
+        ),
+      ),
+    ),
+    iconButtonTheme: IconButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color?>(
+          ADSFoundationsColors.backgroundDark,
+        ),
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+          const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+        ),
+        side: MaterialStateProperty.resolveWith<BorderSide>(
+          (Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return BorderSide(
+                color: ADSFoundationsColors.disabledBackground,
+                width: 2.0,
+              );
+            }
+            return BorderSide(
+              color: ADSFoundationsColors.greyColor.withOpacity(.2),
+              width: 1.5,
+            );
+          },
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+          ),
+        ),
+        foregroundColor: MaterialStateProperty.all<Color?>(
+          ADSFoundationsColors.bodyTextDark,
+        ),
+        textStyle: MaterialStateProperty.all<TextStyle?>(
+          darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
+        ),
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color?>(
+          ADSFoundationsColors.bodyTextDark,
+        ),
+        textStyle: MaterialStateProperty.all<TextStyle?>(
+          darkBodyMedium,
+        ),
+      ),
+    ),
+    inputDecorationTheme: inputDecoration,
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: ADSFoundationsColors.backgroundDark,
+    ),
+    dropdownMenuTheme: DropdownMenuThemeData(
+      textStyle: darkBodyMedium,
+      inputDecorationTheme: inputDecoration,
+    ),
+    iconTheme: const IconThemeData(color: ADSFoundationsColors.blackColor),
+    navigationBarTheme: NavigationBarThemeData(
+      labelTextStyle: MaterialStateTextStyle.resolveWith((states) {
+        if (states.contains(MaterialState.selected)) {
+          return darkBodyMedium.copyWith(
+            fontWeight: FontWeight.bold,
+            fontSize: 13,
+            color: ADSFoundationsColors.whiteColor,
+          );
+        }
+        return darkBodyMedium.copyWith(
+          color: ADSFoundationsColors.whiteColor,
+          fontSize: 13,
+        );
+      }),
+    ),
+    chipTheme: ChipThemeData(
+      backgroundColor: ADSFoundationsColors.backgroundDark,
+      shape: RoundedRectangleBorder(
+        side: const BorderSide(
+          style: BorderStyle.solid,
+          width: borderWidth,
+          color: ADSFoundationsColors.bodyTextDark,
+        ),
+        borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+      ),
+    ),
+    checkboxTheme: const CheckboxThemeData(
+      fillColor: MaterialStatePropertyAll(
+        ADSFoundationsColors.backgroundDark,
+      ),
+      side: BorderSide(
+        style: BorderStyle.solid,
+        width: borderWidth,
+        color: ADSFoundationsColors.bodyTextDark,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+      ),
+      checkColor: MaterialStatePropertyAll(ADSFoundationsColors.primaryColor),
+    ),
+    segmentedButtonTheme: SegmentedButtonThemeData(
+      style: ButtonStyle(
+        side: MaterialStateProperty.resolveWith<BorderSide>(
+          (Set<MaterialState> states) {
+            if (states.contains(MaterialState.disabled)) {
+              return BorderSide(
+                color: ADSFoundationsColors.disabledBackground,
+                width: 2.0,
+              );
+            }
+            return const BorderSide(
+              color: ADSFoundationsColors.primaryColor,
+              width: 1.0,
+            );
+          },
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+          ),
+        ),
+        textStyle: MaterialStateProperty.all<TextStyle?>(
+          darkBodyMedium,
+        ),
+      ),
+    ),
+    tabBarTheme: TabBarTheme(
+      labelStyle: darkBodyMedium,
+      unselectedLabelStyle: darkBodyMedium,
+    ),
+    popupMenuTheme: PopupMenuThemeData(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+      ),
+      labelTextStyle: MaterialStateProperty.all<TextStyle?>(
+        darkBodyMedium,
+      ),
+      iconColor: ADSFoundationsColors.primaryColor,
+      iconSize: ADSFoundationSizes.radiusFormItem,
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return ADSFoundationsColors.primaryColor.withOpacity(.32);
+          }
+
+          if (states.contains(MaterialState.selected)) {
+            return ADSFoundationsColors.primaryColor;
+          }
+
+          return ADSFoundationsColors.bodyTextDark;
+        },
+      ),
+    ),
+    dividerTheme: DividerThemeData(
+      color: ADSFoundationsColors.greyColor.withOpacity(.2),
+      thickness: 1,
     ),
   );
 }

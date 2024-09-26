@@ -14,7 +14,9 @@ export 'atoms/ads_asset_img.dart';
 export 'atoms/ads_network_img.dart';
 
 export 'molecules/button/ads_filled_button.dart';
+export 'molecules/button/ads_filled_icon_button.dart';
 export 'molecules/button/ads_outlined_button.dart';
+export 'molecules/button/ads_outlined_icon_button.dart';
 export 'molecules/button/ads_text_button.dart';
 export 'molecules/button/ads_filled_round_icon_button.dart';
 export 'molecules/card/ads_card.dart';

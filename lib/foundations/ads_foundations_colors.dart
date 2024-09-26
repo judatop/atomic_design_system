@@ -6,7 +6,7 @@ class ADSFoundationsColors {
 
   static const Color primaryColor = ADSColors.color;
 
-  static const Color backgroundLight = Color.fromRGBO(255, 255, 255, 1);
+  static const Color backgroundLight = ADSColors.bgLight;
   static const Color titleTextLight = ADSColors.textLight;
   static const Color subtitleTextLight = ADSColors.textLight;
   static const Color bodyTextLight = ADSColors.textLight;

@@ -5,9 +5,9 @@ class ADSFoundationsTypography {
 
   static const String fontFamily = ADSTypography.adsFont;
 
-  static const double fontSizeTitle = ADSTypography.sizeLG;
-  static const double fontSizeSubtitle = ADSTypography.sizeMD;
-  static const double fontSizeBodyText = ADSTypography.sizeSM;
+  static const double fontSizeTitle = ADSTypography.sizeXXL;
+  static const double fontSizeSubtitle = ADSTypography.sizeLG;
+  static const double fontSizeBodyText = ADSTypography.sizeMD;
   static const double fontSizeLabel = ADSTypography.sizeSM;
   static const double fontSizeLink = ADSTypography.sizeXXS;
 }
