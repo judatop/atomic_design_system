@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AdsFilledButton extends StatelessWidget {
-  final void Function() onPressedCallback;
+  final void Function()? onPressedCallback;
   final String text;
   final ButtonStyle? buttonStyle;
   final TextStyle? textStyle;

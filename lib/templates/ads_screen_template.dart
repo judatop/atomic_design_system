@@ -52,9 +52,8 @@ class AdsScreenTemplate extends StatelessWidget {
               if (Platform.isAndroid) SizedBox(height: screenHeight * 0.08),
               if (goBack)
                 AdsFilledRoundIconButton(
-                  icon: Icon(
-                    Icons.arrow_back_ios_new,
-                    size: screenHeight * 0.02,
+                  icon: const Icon(
+                    Icons.keyboard_arrow_left,
                   ),
                   onPressedCallback: () {
                     if (goBackCallback != null) {
@@ -118,8 +117,8 @@ class AdsScreenTemplate extends StatelessWidget {
 
   EdgeInsets _getDefaultPadding(double screenHeight, double screenWidth) {
     return EdgeInsets.only(
-      left: screenWidth * 0.03,
-      right: screenWidth * 0.03,
+      left: screenWidth * 0.045,
+      right: screenWidth * 0.045,
       bottom: screenHeight * 0.05,
     );
   }
