@@ -130,7 +130,7 @@ class ADSTheme {
           ),
         ),
         overlayColor: MaterialStateProperty.all<Color?>(
-          ADSFoundationsColors.bodyTextDark,
+          ADSFoundationsColors.backgroundLight.withOpacity(.5),
         ),
       ),
     ),
@@ -355,6 +355,9 @@ class ADSTheme {
         ),
         textStyle: MaterialStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
+        ),
+        overlayColor: MaterialStateProperty.all<Color?>(
+          ADSFoundationsColors.backgroundDark.withOpacity(.5),
         ),
       ),
     ),
