@@ -99,8 +99,6 @@ class ADSTheme {
       onSecondary: ADSFoundationsColors.bodyTextDark,
       error: ADSFoundationsColors.errorBackground,
       onError: ADSFoundationsColors.whiteColor,
-      background: ADSFoundationsColors.backgroundLight,
-      onBackground: ADSFoundationsColors.bodyTextLight,
       surface: ADSFoundationsColors.backgroundLight,
       surfaceTint: ADSFoundationsColors.bodyTextLight,
       onSurface: ADSFoundationsColors.blackColor,
@@ -112,39 +110,39 @@ class ADSTheme {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(
           const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        backgroundColor: MaterialStateProperty.all<Color?>(
+        backgroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.primaryColor,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(
             fontWeight: FontWeight.w700,
           ),
         ),
-        overlayColor: MaterialStateProperty.all<Color?>(
+        overlayColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.backgroundLight.withOpacity(.5),
         ),
       ),
     ),
     iconButtonTheme: IconButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color?>(
+        backgroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.backgroundLight,
         ),
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextLight,
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -156,7 +154,7 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
@@ -166,12 +164,12 @@ class ADSTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(
           const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -183,26 +181,26 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextLight,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextLight,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           lightBodyMedium,
         ),
       ),
@@ -217,8 +215,8 @@ class ADSTheme {
     ),
     iconTheme: const IconThemeData(color: ADSFoundationsColors.blackColor),
     navigationBarTheme: NavigationBarThemeData(
-      labelTextStyle: MaterialStateTextStyle.resolveWith((states) {
-        if (states.contains(MaterialState.selected)) {
+      labelTextStyle: WidgetStateTextStyle.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
           return lightBodyMedium.copyWith(
             fontWeight: FontWeight.bold,
             fontSize: 13,
@@ -243,7 +241,7 @@ class ADSTheme {
       ),
     ),
     checkboxTheme: const CheckboxThemeData(
-      fillColor: MaterialStatePropertyAll(
+      fillColor: WidgetStatePropertyAll(
         ADSFoundationsColors.backgroundLight,
       ),
       side: BorderSide(
@@ -254,13 +252,13 @@ class ADSTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(5)),
       ),
-      checkColor: MaterialStatePropertyAll(ADSFoundationsColors.primaryColor),
+      checkColor: WidgetStatePropertyAll(ADSFoundationsColors.primaryColor),
     ),
     segmentedButtonTheme: SegmentedButtonThemeData(
       style: ButtonStyle(
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -272,13 +270,13 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           lightBodyMedium,
         ),
       ),
@@ -291,20 +289,20 @@ class ADSTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
       ),
-      labelTextStyle: MaterialStateProperty.all<TextStyle?>(
+      labelTextStyle: WidgetStateProperty.all<TextStyle?>(
         lightBodyMedium,
       ),
       iconColor: ADSFoundationsColors.primaryColor,
       iconSize: ADSFoundationSizes.radiusFormItem,
     ),
     radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.disabled)) {
+      fillColor: WidgetStateProperty.resolveWith<Color>(
+        (Set<WidgetState> states) {
+          if (states.contains(WidgetState.disabled)) {
             return ADSFoundationsColors.primaryColor.withOpacity(.32);
           }
 
-          if (states.contains(MaterialState.selected)) {
+          if (states.contains(WidgetState.selected)) {
             return ADSFoundationsColors.primaryColor;
           }
 
@@ -328,8 +326,6 @@ class ADSTheme {
       onSecondary: ADSFoundationsColors.bodyTextDark,
       error: ADSFoundationsColors.errorBackground,
       onError: ADSFoundationsColors.whiteColor,
-      background: ADSFoundationsColors.backgroundDark,
-      onBackground: ADSFoundationsColors.bodyTextDark,
       surface: ADSFoundationsColors.backgroundDark,
       surfaceTint: ADSFoundationsColors.bodyTextDark,
       onSurface: ADSFoundationsColors.whiteColor,
@@ -341,37 +337,37 @@ class ADSTheme {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(
           const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        backgroundColor: MaterialStateProperty.all<Color?>(
+        backgroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.primaryColor,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
-        overlayColor: MaterialStateProperty.all<Color?>(
+        overlayColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.backgroundDark.withOpacity(.5),
         ),
       ),
     ),
     iconButtonTheme: IconButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color?>(
+        backgroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.backgroundDark,
         ),
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextDark,
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -383,7 +379,7 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
@@ -393,12 +389,12 @@ class ADSTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(
           const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         ),
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -410,26 +406,26 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextDark,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(
           ADSFoundationsColors.bodyTextDark,
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium,
         ),
       ),
@@ -444,8 +440,8 @@ class ADSTheme {
     ),
     iconTheme: const IconThemeData(color: ADSFoundationsColors.blackColor),
     navigationBarTheme: NavigationBarThemeData(
-      labelTextStyle: MaterialStateTextStyle.resolveWith((states) {
-        if (states.contains(MaterialState.selected)) {
+      labelTextStyle: WidgetStateTextStyle.resolveWith((states) {
+        if (states.contains(WidgetState.selected)) {
           return darkBodyMedium.copyWith(
             fontWeight: FontWeight.bold,
             fontSize: 13,
@@ -470,7 +466,7 @@ class ADSTheme {
       ),
     ),
     checkboxTheme: const CheckboxThemeData(
-      fillColor: MaterialStatePropertyAll(
+      fillColor: WidgetStatePropertyAll(
         ADSFoundationsColors.backgroundDark,
       ),
       side: BorderSide(
@@ -481,13 +477,13 @@ class ADSTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(5)),
       ),
-      checkColor: MaterialStatePropertyAll(ADSFoundationsColors.primaryColor),
+      checkColor: WidgetStatePropertyAll(ADSFoundationsColors.primaryColor),
     ),
     segmentedButtonTheme: SegmentedButtonThemeData(
       style: ButtonStyle(
-        side: MaterialStateProperty.resolveWith<BorderSide>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
+        side: WidgetStateProperty.resolveWith<BorderSide>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.disabled)) {
               return BorderSide(
                 color: ADSFoundationsColors.disabledBackground,
                 width: 2.0,
@@ -499,13 +495,13 @@ class ADSTheme {
             );
           },
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius:
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
-        textStyle: MaterialStateProperty.all<TextStyle?>(
+        textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium,
         ),
       ),
@@ -518,20 +514,20 @@ class ADSTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
       ),
-      labelTextStyle: MaterialStateProperty.all<TextStyle?>(
+      labelTextStyle: WidgetStateProperty.all<TextStyle?>(
         darkBodyMedium,
       ),
       iconColor: ADSFoundationsColors.primaryColor,
       iconSize: ADSFoundationSizes.radiusFormItem,
     ),
     radioTheme: RadioThemeData(
-      fillColor: MaterialStateProperty.resolveWith<Color>(
-        (Set<MaterialState> states) {
-          if (states.contains(MaterialState.disabled)) {
+      fillColor: WidgetStateProperty.resolveWith<Color>(
+        (Set<WidgetState> states) {
+          if (states.contains(WidgetState.disabled)) {
             return ADSFoundationsColors.primaryColor.withOpacity(.32);
           }
 
-          if (states.contains(MaterialState.selected)) {
+          if (states.contains(WidgetState.selected)) {
             return ADSFoundationsColors.primaryColor;
           }
 
