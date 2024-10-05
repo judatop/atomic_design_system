@@ -21,4 +21,5 @@ class ADSColors {
   static const Color bgWhite = Colors.white;
   static const Color bgBlack = Colors.black;
   static const Color bgGrey = Color(0XFFFAFAFA);
+  static const Color bgBlue = Color(0XFF2953CC);
 }

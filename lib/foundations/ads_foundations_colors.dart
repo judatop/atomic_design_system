@@ -23,4 +23,5 @@ class ADSFoundationsColors {
   static const Color whiteColor = ADSColors.bgWhite;
   static const Color blackColor = ADSColors.bgBlack;
   static const Color greyColor = ADSColors.bgGrey;
+  static const Color linkColor = ADSColors.bgBlue;
 }
