@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:atomic_design_system/foundations/ads_foundation_sizes.dart';
 import 'package:atomic_design_system/molecules/button/ads_filled_round_icon_button.dart';
 import 'package:flutter/material.dart';
 
@@ -117,9 +118,9 @@ class AdsScreenTemplate extends StatelessWidget {
 
   EdgeInsets _getDefaultPadding(double screenHeight, double screenWidth) {
     return EdgeInsets.only(
-      left: screenWidth * 0.045,
-      right: screenWidth * 0.045,
-      bottom: screenHeight * 0.05,
+      left: screenWidth * ADSFoundationSizes.defaultHorizontalPadding,
+      right: screenWidth * ADSFoundationSizes.defaultHorizontalPadding,
+      bottom: screenHeight * ADSFoundationSizes.defaultVerticalPadding,
     );
   }
 }

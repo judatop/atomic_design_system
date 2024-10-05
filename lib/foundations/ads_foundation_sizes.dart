@@ -10,4 +10,6 @@ class ADSFoundationSizes {
   static const double sizeIconLarge = ADSSizes.sizeXL;
   static const double radiusFormItem = ADSSizes.sizeXXXS;
   static const double radiusCard = ADSSizes.sizeXXXS;
+  static const double defaultHorizontalPadding = 0.045;
+  static const double defaultVerticalPadding = 0.05;
 }
