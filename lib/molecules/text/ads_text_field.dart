@@ -88,8 +88,7 @@ class AdsTextField extends StatelessWidget {
                 onTap: onTapPrefixIcon,
                 child: Icon(
                   prefixIcon,
-                  color: prefixIconColor ?? ADSFoundationsColors.bodyTextLight,
-                  size: prefixIconSize ?? ADSFoundationSizes.sizeIconMedium,
+                  size: prefixIconSize ?? 23,
                 ),
               )
             : null,
@@ -98,12 +97,12 @@ class AdsTextField extends StatelessWidget {
                 onTap: onTapSuffixIcon,
                 child: Icon(
                   suffixIcon,
-                  color: suffixIconColor ?? ADSFoundationsColors.bodyTextLight,
-                  size: suffixIconSize ?? ADSFoundationSizes.sizeIconMedium,
+                  size: suffixIconSize ?? 23,
                 ),
               )
             : null,
         errorText: errorText,
+        errorMaxLines: 3,
       ),
       keyboardType: keyboardType,
       obscureText: obscureText ?? false,

@@ -37,14 +37,16 @@ class ADSTheme {
     color: ADSFoundationsColors.titleTextDark,
   );
 
-  static const double borderWidth = 1.5;
+  static const double borderWidth = 1;
 
   static final inputDecoration = InputDecorationTheme(
     hintStyle: lightBodyMedium.copyWith(
-      color: ADSFoundationsColors.disabledBackground,
+      color: Colors.grey.withOpacity(.5),
     ),
-    errorStyle:
-        lightBodyMedium.copyWith(color: ADSFoundationsColors.errorBackground),
+    errorStyle: lightBodyMedium.copyWith(
+      color: ADSFoundationsColors.errorBackground,
+      fontSize: ADSFoundationsTypography.fontSizeLabel,
+    ),
     enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(
         style: BorderStyle.solid,
@@ -205,7 +207,9 @@ class ADSTheme {
         ),
       ),
     ),
-    inputDecorationTheme: inputDecoration,
+    inputDecorationTheme: inputDecoration.copyWith(
+      prefixIconColor: ADSFoundationsColors.bodyTextLight,
+    ),
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: ADSFoundationsColors.backgroundLight,
     ),
@@ -385,6 +389,9 @@ class ADSTheme {
                 BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
           ),
         ),
+        overlayColor: WidgetStateProperty.all<Color?>(
+          ADSFoundationsColors.bodyTextDark.withOpacity(.2),
+        ),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -418,6 +425,9 @@ class ADSTheme {
         textStyle: WidgetStateProperty.all<TextStyle?>(
           darkBodyMedium.copyWith(fontWeight: FontWeight.w700),
         ),
+        overlayColor: WidgetStateProperty.all<Color?>(
+          ADSFoundationsColors.bodyTextDark.withOpacity(.2),
+        ),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
@@ -430,7 +440,9 @@ class ADSTheme {
         ),
       ),
     ),
-    inputDecorationTheme: inputDecoration,
+    inputDecorationTheme: inputDecoration.copyWith(
+      prefixIconColor: ADSFoundationsColors.bodyTextDark,
+    ),
     bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: ADSFoundationsColors.backgroundDark,
     ),

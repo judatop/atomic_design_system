@@ -26,11 +26,6 @@ class AdsFilledIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    final color = colorScheme.brightness == Brightness.dark
-        ? ADSFoundationsColors.whiteColor
-        : ADSFoundationsColors.blackColor;
-
     return FilledButton.icon(
       onPressed: onPressedCallback,
       style: buttonStyle,
@@ -42,7 +37,7 @@ class AdsFilledIconButton extends StatelessWidget {
       icon: Icon(
         icon,
         size: iconSize ?? ADSFoundationSizes.sizeIconMedium,
-        color: iconColor ?? color,
+        color: iconColor,
       ),
     );
   }
