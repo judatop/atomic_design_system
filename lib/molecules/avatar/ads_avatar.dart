@@ -1,4 +1,3 @@
-import 'package:atomic_design_system/atomic_design_system.dart';
 import 'package:flutter/material.dart';
 
 class AdsAvatar extends StatelessWidget {
@@ -24,7 +23,6 @@ class AdsAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final deviceWidth = MediaQuery.of(context).size.width;
 
     return CircleAvatar(
       radius: 50,

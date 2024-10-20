@@ -105,6 +105,17 @@ class ADSTheme {
       surfaceTint: ADSFoundationsColors.bodyTextLight,
       onSurface: ADSFoundationsColors.blackColor,
     ),
+    dialogTheme: DialogTheme(
+      backgroundColor: ADSFoundationsColors.whiteColor,
+      shape: RoundedRectangleBorder(
+        side: const BorderSide(
+          style: BorderStyle.solid,
+          width: 0.5,
+          color: ADSFoundationsColors.bodyTextLight,
+        ),
+        borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+      ),
+    ),
     textTheme: const TextTheme(
       headlineMedium: lightHeadlineMedium,
       titleMedium: lightTitleMedium,
@@ -334,6 +345,17 @@ class ADSTheme {
       surfaceTint: ADSFoundationsColors.bodyTextDark,
       onSurface: ADSFoundationsColors.whiteColor,
     ),
+    dialogTheme: DialogTheme(
+      backgroundColor: ADSFoundationsColors.blackColor,
+      shape: RoundedRectangleBorder(
+        side: const BorderSide(
+          style: BorderStyle.solid,
+          width: 0.5,
+          color: ADSFoundationsColors.bodyTextDark,
+        ),
+        borderRadius: BorderRadius.circular(ADSFoundationSizes.radiusFormItem),
+      ),
+    ),
     textTheme: TextTheme(
       headlineMedium: darkHeadlineMedium,
       titleMedium: darkTitleMedium,
@@ -450,7 +472,7 @@ class ADSTheme {
       textStyle: darkBodyMedium,
       inputDecorationTheme: inputDecoration,
     ),
-    iconTheme: const IconThemeData(color: ADSFoundationsColors.blackColor),
+    iconTheme: const IconThemeData(color: ADSFoundationsColors.whiteColor),
     navigationBarTheme: NavigationBarThemeData(
       labelTextStyle: WidgetStateTextStyle.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {

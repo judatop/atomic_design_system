@@ -1,5 +1,4 @@
 import 'package:atomic_design_system/foundations/ads_foundation_sizes.dart';
-import 'package:atomic_design_system/foundations/ads_foundations_colors.dart';
 import 'package:flutter/material.dart';
 
 class AdsFilledIconButton extends StatelessWidget {
