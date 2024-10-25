@@ -22,17 +22,19 @@ class AdsAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
-    return CircleAvatar(
-      radius: 50,
-      backgroundColor: colorScheme.primary,
-      child: imageUrl != null
-          ? Image.network(
-              imageUrl!,
-              fit: BoxFit.cover,
-            )
-          : getDefaultImg(),
-    );
+    return imageUrl != null
+        ? CircleAvatar(
+            backgroundImage: NetworkImage(imageUrl!),
+            radius: 50,
+          )
+        : CircleAvatar(
+            radius: 50,
+            backgroundColor: Theme.of(context).colorScheme.secondary,
+            child: const Icon(
+              Icons.person_2,
+              size: 50,
+              color: Colors.white,
+            ),
+          );
   }
 }
