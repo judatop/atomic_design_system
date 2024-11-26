@@ -7,9 +7,10 @@ class AdsFilledIconButton extends StatelessWidget {
   final ButtonStyle? buttonStyle;
   final TextStyle? textStyle;
   final FocusNode? focusNode;
-  final IconData icon;
+  final IconData? icon;
   final double? iconSize;
   final Color? iconColor;
+  final Widget? widget;
 
   const AdsFilledIconButton({
     super.key,
@@ -18,9 +19,10 @@ class AdsFilledIconButton extends StatelessWidget {
     this.buttonStyle,
     this.textStyle,
     this.focusNode,
-    required this.icon,
+    this.icon,
     this.iconColor,
     this.iconSize,
+    this.widget,
   });
 
   @override
@@ -33,11 +35,12 @@ class AdsFilledIconButton extends StatelessWidget {
         text,
         style: textStyle,
       ),
-      icon: Icon(
-        icon,
-        size: iconSize ?? ADSFoundationSizes.sizeIconMedium,
-        color: iconColor,
-      ),
+      icon: widget ??
+          Icon(
+            icon,
+            size: iconSize ?? ADSFoundationSizes.sizeIconMedium,
+            color: iconColor,
+          ),
     );
   }
 }
