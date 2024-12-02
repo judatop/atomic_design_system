@@ -1,8 +1,5 @@
-import 'package:atomic_design_system/foundations/ads_foundation_sizes.dart';
-import 'package:atomic_design_system/foundations/ads_foundations_colors.dart';
+import 'package:atomic_design_system/atomic_design_system.dart';
 import 'package:flutter/material.dart';
-
-const double cardElevation = 10;
 
 class AdsCard extends StatelessWidget {
   final Widget child;
@@ -21,11 +18,14 @@ class AdsCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
+      elevation: 0,
       margin: margin ?? EdgeInsets.zero,
       color: colorScheme.surface,
-      elevation: cardElevation,
-      shadowColor: ADSFoundationsColors.blackColor.withOpacity(0.25),
       shape: RoundedRectangleBorder(
+        side: BorderSide(
+          color: Colors.grey.withOpacity(.2),
+          width: ADSTheme.borderWidth,
+        ),
         borderRadius: BorderRadius.circular(
           ADSFoundationSizes.radiusCard,
         ),

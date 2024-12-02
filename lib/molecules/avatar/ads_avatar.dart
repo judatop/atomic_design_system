@@ -1,38 +1,38 @@
+import 'package:atomic_design_system/foundations/ads_foundation_sizes.dart';
 import 'package:flutter/material.dart';
 
+double defaultScale = 1.0;
+
 class AdsAvatar extends StatelessWidget {
-  final double? customWidthPercentage;
+  final double? iconSize;
+  final double? imgScale;
   final String? imageUrl;
+  final double? radius;
 
   const AdsAvatar({
     super.key,
-    this.customWidthPercentage,
+    this.iconSize,
+    this.imgScale,
     this.imageUrl,
-  }) : assert(
-          customWidthPercentage == null ||
-              (customWidthPercentage >= 0 && customWidthPercentage <= 1),
-        );
-
-  Widget getDefaultImg() {
-    return const Icon(
-      Icons.person,
-      color: Colors.white,
-    );
-  }
+    this.radius,
+  });
 
   @override
   Widget build(BuildContext context) {
     return imageUrl != null
         ? CircleAvatar(
-            backgroundImage: NetworkImage(imageUrl!),
-            radius: 50,
+            backgroundImage: NetworkImage(
+              imageUrl!,
+              scale: imgScale ?? defaultScale,
+            ),
+            radius: radius ?? ADSFoundationSizes.radiusAvatar,
           )
         : CircleAvatar(
-            radius: 50,
+            radius: radius ?? ADSFoundationSizes.radiusAvatar,
             backgroundColor: Theme.of(context).colorScheme.secondary,
-            child: const Icon(
+            child: Icon(
               Icons.person_2,
-              size: 50,
+              size: iconSize ?? ADSFoundationSizes.sizeIconExtraLarge,
               color: Colors.white,
             ),
           );

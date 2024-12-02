@@ -9,4 +9,5 @@ class ADSSizes {
   static const double sizeLG = 28;
   static const double sizeXL = 35;
   static const double sizeXXL = 40;
+  static const double sizeXXXL = 50;
 }

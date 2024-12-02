@@ -8,8 +8,10 @@ class ADSFoundationSizes {
   static const double sizeIconSmall = ADSSizes.sizeXS;
   static const double sizeIconMedium = ADSSizes.sizeLG;
   static const double sizeIconLarge = ADSSizes.sizeXL;
+  static const double sizeIconExtraLarge = ADSSizes.sizeXXXL;
   static const double radiusFormItem = ADSSizes.sizeXXXS;
   static const double radiusCard = ADSSizes.sizeXXXS;
+  static const double radiusAvatar = ADSSizes.sizeXXXL;
   static const double defaultHorizontalPadding = 0.045;
   static const double defaultVerticalPadding = 0.05;
 }
