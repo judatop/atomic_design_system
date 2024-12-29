@@ -25,6 +25,7 @@ class AdsTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final TextAlign? textAlign;
   final int? maxLength;
+  final int? maxLines;
   final String? initialValue;
   final TextInputType? keyboardType;
   final String? errorText;
@@ -48,7 +49,7 @@ class AdsTextField extends StatelessWidget {
     this.onTapSuffixIcon,
     this.suffixIconColor,
     this.suffixIconSize,
-    this.obscureText = false,
+    this.obscureText,
     this.enableInteractiveSelection,
     this.enableSuggestions,
     this.autocorrect,
@@ -56,6 +57,7 @@ class AdsTextField extends StatelessWidget {
     this.focusNode,
     this.textAlign,
     this.maxLength,
+    this.maxLines,
     this.initialValue,
     this.keyboardType,
     this.errorText,
@@ -115,6 +117,7 @@ class AdsTextField extends StatelessWidget {
       enabled: enabled,
       onEditingComplete: onEditingComplete,
       onSubmitted: onSubmitted,
+      maxLines: obscureText != null ? 1 : maxLines,
     );
   }
 }

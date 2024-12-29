@@ -17,17 +17,22 @@ class AdsFilledRoundIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return IconButton(
-      padding: const EdgeInsets.all(0),
+      padding: EdgeInsets.zero,
       onPressed: onPressedCallback,
       icon: icon,
       style: buttonStyle ??
           ButtonStyle(
-            padding: const MaterialStatePropertyAll(EdgeInsets.zero),
-            backgroundColor: MaterialStatePropertyAll(
+            minimumSize: WidgetStateProperty.all(Size.zero),
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            padding:
+                WidgetStatePropertyAll(EdgeInsets.all(screenWidth * 0.015)),
+            backgroundColor: WidgetStatePropertyAll(
               backgroundColor ?? Theme.of(context).colorScheme.surface,
             ),
-            shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+            shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius:
                     BorderRadius.circular(ADSFoundationSizes.radiusFormItem),

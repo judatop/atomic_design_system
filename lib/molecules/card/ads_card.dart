@@ -6,6 +6,8 @@ class AdsCard extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final void Function()? onTap;
   final void Function()? onLongPress;
+  final Color? borderColor;
+  final double? borderWidth;
 
   const AdsCard({
     super.key,
@@ -13,6 +15,8 @@ class AdsCard extends StatelessWidget {
     this.margin,
     this.onTap,
     this.onLongPress,
+    this.borderColor,
+    this.borderWidth,
   });
 
   @override
@@ -25,8 +29,8 @@ class AdsCard extends StatelessWidget {
       color: colorScheme.surface,
       shape: RoundedRectangleBorder(
         side: BorderSide(
-          color: Colors.grey.withOpacity(.2),
-          width: ADSTheme.borderWidth,
+          color: borderColor ?? Colors.grey.withOpacity(.2),
+          width: borderWidth ?? ADSTheme.borderWidth,
         ),
         borderRadius: BorderRadius.circular(
           ADSFoundationSizes.radiusCard,
