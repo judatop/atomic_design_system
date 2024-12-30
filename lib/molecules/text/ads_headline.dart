@@ -18,6 +18,7 @@ class AdsHeadline extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign ?? TextAlign.center,
+      overflow: TextOverflow.ellipsis,
       style: textStyle ?? textTheme.headlineMedium,
     );
   }

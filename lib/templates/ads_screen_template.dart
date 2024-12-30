@@ -19,6 +19,7 @@ class AdsScreenTemplate extends StatelessWidget {
   final Widget? drawer;
   final Widget? floatingActionButton;
   final Widget? bottomNavigationBar;
+  final bool? resizeToAvoidBottomInset;
 
   const AdsScreenTemplate({
     super.key,
@@ -37,6 +38,7 @@ class AdsScreenTemplate extends StatelessWidget {
     this.drawer,
     this.floatingActionButton,
     this.bottomNavigationBar,
+    this.resizeToAvoidBottomInset,
   });
 
   Widget _getBody(
@@ -113,6 +115,7 @@ class AdsScreenTemplate extends StatelessWidget {
       ),
       floatingActionButton: floatingActionButton,
       bottomNavigationBar: bottomNavigationBar,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
     );
   }
 

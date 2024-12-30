@@ -27,8 +27,7 @@ class AdsFilledRoundIconButton extends StatelessWidget {
           ButtonStyle(
             minimumSize: WidgetStateProperty.all(Size.zero),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            padding:
-                WidgetStatePropertyAll(EdgeInsets.all(screenWidth * 0.015)),
+            padding: WidgetStatePropertyAll(EdgeInsets.all(screenWidth * 0.02)),
             backgroundColor: WidgetStatePropertyAll(
               backgroundColor ?? Theme.of(context).colorScheme.surface,
             ),
