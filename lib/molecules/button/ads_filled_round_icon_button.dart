@@ -6,6 +6,7 @@ class AdsFilledRoundIconButton extends StatelessWidget {
   final void Function()? onPressedCallback;
   final Color? backgroundColor;
   final ButtonStyle? buttonStyle;
+  final String? tooltip;
 
   const AdsFilledRoundIconButton({
     super.key,
@@ -13,6 +14,7 @@ class AdsFilledRoundIconButton extends StatelessWidget {
     this.onPressedCallback,
     this.backgroundColor,
     this.buttonStyle,
+    this.tooltip,
   });
 
   @override
@@ -20,6 +22,7 @@ class AdsFilledRoundIconButton extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return IconButton(
+      tooltip: tooltip,
       padding: EdgeInsets.zero,
       onPressed: onPressedCallback,
       icon: icon,
