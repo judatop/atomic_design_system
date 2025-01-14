@@ -8,6 +8,7 @@ class AdsCard extends StatelessWidget {
   final void Function()? onLongPress;
   final Color? borderColor;
   final double? borderWidth;
+  final Color? bgColor;
 
   const AdsCard({
     super.key,
@@ -17,6 +18,7 @@ class AdsCard extends StatelessWidget {
     this.onLongPress,
     this.borderColor,
     this.borderWidth,
+    this.bgColor,
   });
 
   @override
@@ -26,7 +28,7 @@ class AdsCard extends StatelessWidget {
     return Card(
       elevation: 0,
       margin: margin ?? EdgeInsets.zero,
-      color: colorScheme.surface,
+      color: bgColor ?? colorScheme.surface,
       shape: RoundedRectangleBorder(
         side: BorderSide(
           color: borderColor ?? Colors.grey.withOpacity(.2),
