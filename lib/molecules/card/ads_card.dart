@@ -9,6 +9,7 @@ class AdsCard extends StatelessWidget {
   final Color? borderColor;
   final double? borderWidth;
   final Color? bgColor;
+  final double? elevation;
 
   const AdsCard({
     super.key,
@@ -19,6 +20,7 @@ class AdsCard extends StatelessWidget {
     this.borderColor,
     this.borderWidth,
     this.bgColor,
+    this.elevation,
   });
 
   @override
@@ -26,7 +28,7 @@ class AdsCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
+      elevation: elevation ?? 0,
       margin: margin ?? EdgeInsets.zero,
       color: bgColor ?? colorScheme.surface,
       shape: RoundedRectangleBorder(
