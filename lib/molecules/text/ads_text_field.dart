@@ -32,6 +32,7 @@ class AdsTextField extends StatelessWidget {
   final bool? enabled;
   final void Function()? onEditingComplete;
   final void Function(String)? onSubmitted;
+  final String? counterText;
 
   const AdsTextField({
     super.key,
@@ -64,6 +65,7 @@ class AdsTextField extends StatelessWidget {
     this.enabled,
     this.onEditingComplete,
     this.onSubmitted,
+    this.counterText,
   });
 
   @override
@@ -105,6 +107,7 @@ class AdsTextField extends StatelessWidget {
             : null,
         errorText: errorText,
         errorMaxLines: 3,
+        counterText: counterText ?? '',
       ),
       keyboardType: keyboardType,
       obscureText: obscureText ?? false,
