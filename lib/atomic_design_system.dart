@@ -24,6 +24,7 @@ export 'molecules/text/ads_headline.dart';
 export 'molecules/text/ads_subtitle.dart';
 export 'molecules/text/ads_title.dart';
 export 'molecules/text/ads_text_field.dart';
+export 'package:atomic_design_system/molecules/text/ads_text_form_field.dart';
 export 'molecules/avatar/ads_avatar.dart';
 
 export 'organisms/ads_form_field.dart';
