@@ -74,6 +74,7 @@ class AdsTextFormField extends StatelessWidget {
     final brightness = Theme.of(context).brightness;
 
     return TextFormField(
+      initialValue: initialValue,
       controller: controller,
       onChanged: (value) {
         onChanged?.call(value);
