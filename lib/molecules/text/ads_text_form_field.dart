@@ -121,6 +121,7 @@ class AdsTextFormField extends StatelessWidget {
       enabled: enabled,
       onEditingComplete: onEditingComplete,
       maxLines: obscureText != null ? 1 : maxLines,
+      onFieldSubmitted: onSubmitted,
     );
   }
 }
