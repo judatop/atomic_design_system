@@ -5,6 +5,7 @@ class AdsCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? margin;
   final void Function()? onTap;
+  final void Function()? onDoubleTap;
   final void Function()? onLongPress;
   final Color? borderColor;
   final double? borderWidth;
@@ -16,6 +17,7 @@ class AdsCard extends StatelessWidget {
     required this.child,
     this.margin,
     this.onTap,
+    this.onDoubleTap,
     this.onLongPress,
     this.borderColor,
     this.borderWidth,
@@ -41,6 +43,7 @@ class AdsCard extends StatelessWidget {
         ),
       ),
       child: InkWell(
+        onDoubleTap: onDoubleTap,
         onTap: onTap,
         onLongPress: onLongPress,
         splashColor: colorScheme.primary.withOpacity(0.1),
