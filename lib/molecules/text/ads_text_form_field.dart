@@ -33,6 +33,7 @@ class AdsTextFormField extends StatelessWidget {
   final void Function()? onEditingComplete;
   final void Function(String)? onSubmitted;
   final String? counterText;
+  final TextStyle? hintStyle;
 
   const AdsTextFormField({
     super.key,
@@ -66,6 +67,7 @@ class AdsTextFormField extends StatelessWidget {
     this.onEditingComplete,
     this.onSubmitted,
     this.counterText,
+    this.hintStyle,
   }) : assert(initialValue == null || controller == null);
 
   @override
@@ -88,6 +90,7 @@ class AdsTextFormField extends StatelessWidget {
           ),
       decoration: InputDecoration(
         hintText: hintText,
+        hintStyle: hintStyle,
         prefixIcon: prefixIcon != null
             ? GestureDetector(
                 onTap: onTapPrefixIcon,
