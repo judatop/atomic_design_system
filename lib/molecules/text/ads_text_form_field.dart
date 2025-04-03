@@ -2,7 +2,7 @@ import 'package:atomic_design_system/atomic_design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AdsTextField extends StatelessWidget {
+class AdsTextFormField extends StatelessWidget {
   final String? hintText;
   final TextEditingController? controller;
   final void Function(String)? onChanged;
@@ -33,8 +33,9 @@ class AdsTextField extends StatelessWidget {
   final void Function()? onEditingComplete;
   final void Function(String)? onSubmitted;
   final String? counterText;
+  final TextStyle? hintStyle;
 
-  const AdsTextField({
+  const AdsTextFormField({
     super.key,
     this.hintText,
     this.controller,
@@ -66,14 +67,16 @@ class AdsTextField extends StatelessWidget {
     this.onEditingComplete,
     this.onSubmitted,
     this.counterText,
-  });
+    this.hintStyle,
+  }) : assert(initialValue == null || controller == null);
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final brightness = Theme.of(context).brightness;
 
-    return TextField(
+    return TextFormField(
+      initialValue: initialValue,
       controller: controller,
       onChanged: (value) {
         onChanged?.call(value);
@@ -87,6 +90,7 @@ class AdsTextField extends StatelessWidget {
           ),
       decoration: InputDecoration(
         hintText: hintText,
+        hintStyle: hintStyle,
         prefixIcon: prefixIcon != null
             ? GestureDetector(
                 onTap: onTapPrefixIcon,
@@ -119,8 +123,8 @@ class AdsTextField extends StatelessWidget {
       maxLength: maxLength,
       enabled: enabled,
       onEditingComplete: onEditingComplete,
-      onSubmitted: onSubmitted,
       maxLines: obscureText != null ? 1 : maxLines,
+      onFieldSubmitted: onSubmitted,
     );
   }
 }

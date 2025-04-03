@@ -5,12 +5,24 @@ class AdsCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? margin;
   final void Function()? onTap;
+  final void Function()? onDoubleTap;
+  final void Function()? onLongPress;
+  final Color? borderColor;
+  final double? borderWidth;
+  final Color? bgColor;
+  final double? elevation;
 
   const AdsCard({
     super.key,
     required this.child,
     this.margin,
     this.onTap,
+    this.onDoubleTap,
+    this.onLongPress,
+    this.borderColor,
+    this.borderWidth,
+    this.bgColor,
+    this.elevation,
   });
 
   @override
@@ -18,20 +30,22 @@ class AdsCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Card(
-      elevation: 0,
+      elevation: elevation ?? 0,
       margin: margin ?? EdgeInsets.zero,
-      color: colorScheme.surface,
+      color: bgColor ?? colorScheme.surface,
       shape: RoundedRectangleBorder(
         side: BorderSide(
-          color: Colors.grey.withOpacity(.2),
-          width: ADSTheme.borderWidth,
+          color: borderColor ?? Colors.grey.withOpacity(.2),
+          width: borderWidth ?? ADSTheme.borderWidth,
         ),
         borderRadius: BorderRadius.circular(
           ADSFoundationSizes.radiusCard,
         ),
       ),
       child: InkWell(
+        onDoubleTap: onDoubleTap,
         onTap: onTap,
+        onLongPress: onLongPress,
         splashColor: colorScheme.primary.withOpacity(0.1),
         borderRadius: BorderRadius.circular(
           ADSFoundationSizes.radiusCard,

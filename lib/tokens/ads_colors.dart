@@ -11,7 +11,7 @@ class ADSColors {
   static const Color textLight = Color(0XFF09090B);
   static const Color textLightSecondary = Color(0XFF71717A);
 
-  static const Color bgDark = Color(0xFF0A0A0B);
+  static const Color bgDark = Color.fromARGB(255, 18, 18, 21);
   static const Color textDark = Color(0XFFFAFAFA);
   static const Color textDarkSecondary = Color(0XFF71717A);
 
