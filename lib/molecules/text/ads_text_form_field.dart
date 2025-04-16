@@ -34,6 +34,7 @@ class AdsTextFormField extends StatelessWidget {
   final void Function(String)? onSubmitted;
   final String? counterText;
   final TextStyle? hintStyle;
+  final TextCapitalization? textCapitalization;
 
   const AdsTextFormField({
     super.key,
@@ -68,6 +69,7 @@ class AdsTextFormField extends StatelessWidget {
     this.onSubmitted,
     this.counterText,
     this.hintStyle,
+    this.textCapitalization,
   }) : assert(initialValue == null || controller == null);
 
   @override
@@ -125,6 +127,7 @@ class AdsTextFormField extends StatelessWidget {
       onEditingComplete: onEditingComplete,
       maxLines: obscureText != null ? 1 : maxLines,
       onFieldSubmitted: onSubmitted,
+      textCapitalization: textCapitalization ?? TextCapitalization.none,
     );
   }
 }
