@@ -105,7 +105,7 @@ class ADSTheme {
       surfaceTint: ADSFoundationsColors.bodyTextLight,
       onSurface: ADSFoundationsColors.blackColor,
     ),
-    dialogTheme: DialogTheme(
+    dialogTheme: DialogThemeData(
       backgroundColor: ADSFoundationsColors.whiteColor,
       shape: RoundedRectangleBorder(
         side: const BorderSide(
@@ -296,7 +296,7 @@ class ADSTheme {
         ),
       ),
     ),
-    tabBarTheme: const TabBarTheme(
+    tabBarTheme: const TabBarThemeData(
       labelStyle: lightBodyMedium,
       unselectedLabelStyle: lightBodyMedium,
     ),
@@ -345,7 +345,7 @@ class ADSTheme {
       surfaceTint: ADSFoundationsColors.bodyTextDark,
       onSurface: ADSFoundationsColors.whiteColor,
     ),
-    dialogTheme: DialogTheme(
+    dialogTheme: DialogThemeData(
       backgroundColor: ADSFoundationsColors.blackColor,
       shape: RoundedRectangleBorder(
         side: const BorderSide(
@@ -540,7 +540,7 @@ class ADSTheme {
         ),
       ),
     ),
-    tabBarTheme: TabBarTheme(
+    tabBarTheme: TabBarThemeData(
       labelStyle: darkBodyMedium,
       unselectedLabelStyle: darkBodyMedium,
     ),
